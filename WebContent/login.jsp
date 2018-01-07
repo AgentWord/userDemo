@@ -7,7 +7,7 @@
 <title>欢迎使用本系统</title>
 </head>
 <body>
-欢迎使用本系统
+欢迎使用本系统 你好cdb
 <form id = "loginform" action="j_spring_security_check" method="POST" >
 
 <table>
