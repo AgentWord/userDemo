@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-1 17:43:22 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.bnu.model.UUserInfo" table="u_user_info" catalog="db">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="user_name" length="30" not-null="true" />
+        </property>
+        <property name="userPwd" type="string">
+            <column name="user_pwd" length="50" not-null="true" />
+        </property>
+        <property name="trueName" type="string">
+            <column name="true_name" length="50" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="mobileNum" type="string">
+            <column name="mobile_num" length="15" />
+        </property>
+        <property name="phoneNum" type="string">
+            <column name="phone_num" length="20" />
+        </property>
+        <property name="deptId" type="string">
+            <column name="dept_id" length="10" />
+        </property>
+        <property name="enabled" type="java.lang.Boolean">
+            <column name="enabled" />
+        </property>
+        <property name="registerdate" type="date">
+            <column name="registerdate" length="10" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

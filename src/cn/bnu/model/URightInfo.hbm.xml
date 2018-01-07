@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-1 17:43:22 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.bnu.model.URightInfo" table="u_right_info" catalog="db">
+        <id name="rightId" type="string">
+            <column name="right_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="rightName" type="string">
+            <column name="right_name" length="100" not-null="true" />
+        </property>
+        <property name="rightIndex" type="string">
+            <column name="right_index" length="50" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="300" />
+        </property>
+        <property name="enabled" type="java.lang.Boolean">
+            <column name="enabled" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

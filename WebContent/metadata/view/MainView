@@ -1,0 +1,606 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "designerId": "ccf11f1b-c72a-44fc-9803-344ace6f3349",
+    "viewControllerInstanceId": "4611ed12-d628-4ff4-91cd-baa29154d036",
+    "viewModelInstanceId": "f4941368-9963-4383-b809-d66d6516ffe3",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 90,
+                "html": [
+                    "<h1 style=\"color:#197bc1;;font-family:Microsoft YaHei;margin:10px 0px 0px 35px;\"> 系统名称显示"
+                ],
+                "itemId": "headerPanel",
+                "layout|region": "north",
+                "title": null
+            },
+            "name": "MyPanel1",
+            "designerId": "d12ff238-6d23-4f16-b276-6ecc63966fbf",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "height": 43,
+                        "width": 150
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "4c39dc46-35f3-427d-9362-cdec3195ccf2",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "homePanel",
+                                "layout|flex": null,
+                                "text": "主页"
+                            },
+                            "name": "MyButton",
+                            "designerId": "301b3f0e-a512-4ba5-9426-0388b1bb9e72",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "var xtype = button.id;",
+                                            "var mainView = Ext.getCmp('mainView');",
+                                            "mainView.removeAll();",
+                                            "mainView.add(Ext.widget(xtype));"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "7c02ae13-e8ae-4b5b-9687-1e58dc12eda6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "当前时间："
+                            },
+                            "name": "MyLabel3",
+                            "designerId": "111f59dd-d280-43ee-8275-373d4e10169e"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 40,
+                                "html": "<p id=\"time\">当前时间：</p>",
+                                "layout|flex": null,
+                                "text": ""
+                            },
+                            "name": "MyLabel",
+                            "designerId": "654471bb-78c8-4814-a6bd-88fbf2d46083",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLabelAfterRender",
+                                        "implHandler": [
+                                            "document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",
+                                            "setInterval(\"document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());\",1000);"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "name": "onLabelAfterRender",
+                                    "designerId": "680e7220-9fe0-4723-aeec-a094f518197c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MyFill",
+                            "designerId": "2de92776-6417-4f14-a236-1d96e3c8fe4f"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "当前用户："
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "42c121e8-696f-4ffc-a6fc-3ea0cd8d6004"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "<%=request.getUserPrincipal().getName();%>",
+                                "id": "mainview_curUernameLabel",
+                                "layout|flex": null,
+                                "text": "admin"
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "1e55bc71-7106-4856-a595-46c5857f6362",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMainview_curUernameLabelRender",
+                                        "implHandler": [
+                                            "Ext.Ajax.request({",
+                                            "    url: 'get_currentUsername',",
+                                            "    success: function(response) {",
+                                            "        var username = response.responseText;",
+                                            "        if (username) {",
+                                            "            Ext.getCmp('mainview_curUernameLabel').text = username;",
+                                            "            //component.text = username;",
+                                            "            //console.log(\"username:\",username);",
+                                            "        } else {",
+                                            "            //console.log(\"errorrr.\");",
+                                            "        }",
+                                            "    },",
+                                            "    failure: function(conn, response, options, eOpts) {",
+                                            "        console.log(\"请求错误。\");",
+                                            "    }",
+                                            "});"
+                                        ],
+                                        "name": "render",
+                                        "scope": "me"
+                                    },
+                                    "name": "onMainview_curUernameLabelRender",
+                                    "designerId": "44104fc9-4ab6-4e60-965b-6d0fe3974738"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "href": "j_spring_security_logout",
+                                "hrefTarget": "_parent",
+                                "layout|flex": null,
+                                "text": "退出"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "2a2d41b1-72b9-4ec2-86da-bc6255853fb9"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapseDirection": "left",
+                "id": "mainLeftMenuPanel",
+                "itemId": "menuPanel",
+                "layout": "accordion",
+                "layout|collapseMode": null,
+                "layout|region": "west",
+                "layout|split": true,
+                "title": null,
+                "width": 250
+            },
+            "name": "MyPanel2",
+            "designerId": "ec429cf4-e38a-4872-a33d-5a8029944736",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "通知信息管理"
+                    },
+                    "name": "MyPanel11",
+                    "designerId": "c749454c-251f-4a67-b271-05ee29dac618",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Menu",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "floating": false,
+                                "itemId": "menu3",
+                                "width": null
+                            },
+                            "name": "MyMenu2",
+                            "designerId": "9a503335-8dac-4445-aa58-5f8db9d03641",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hideOnClick": false,
+                                        "id": "notice_Publish",
+                                        "text": "通知发布"
+                                    },
+                                    "name": "MyMenuItem6",
+                                    "designerId": "bd704ef3-a37b-4a84-bfd9-4d1f9a3f7305"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hideOnClick": false,
+                                        "id": "notice_Management",
+                                        "text": "通知管理"
+                                    },
+                                    "name": "MyMenuItem8",
+                                    "designerId": "1fbd9fc1-3bb2-45bf-9ea4-fac5b79dd531"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hideOnClick": false,
+                                        "id": "notice_Columns",
+                                        "text": "栏目管理"
+                                    },
+                                    "name": "MyMenuItem19",
+                                    "designerId": "109f5f53-f996-46b7-99b8-11571b5bad4e"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMenu3Click4",
+                                        "implHandler": [
+                                            "var xtype = item.id;",
+                                            "var mainView = Ext.getCmp('mainView');",
+                                            "mainView.removeAll();",
+                                            "mainView.add(Ext.widget(xtype));"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onMenu3Click4",
+                                    "designerId": "2555f323-00a5-47ce-b163-5a5e66911a2c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hideMode": null,
+                        "title": "系统管理维护"
+                    },
+                    "name": "MyPanel15",
+                    "designerId": "14923f88-ac9f-49e7-9633-b2704700eecd",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Menu",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "floating": false,
+                                "itemId": "menu3",
+                                "width": null
+                            },
+                            "name": "MyMenu2",
+                            "designerId": "1649fb16-aaae-4c02-aa91-d99a7de3538e",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hideOnClick": false,
+                                        "id": "system_UserManage",
+                                        "text": "用户信息管理"
+                                    },
+                                    "name": "MyMenuItem7",
+                                    "designerId": "cc0112b1-d1c5-408f-a61e-a6365c70f160"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hideOnClick": false,
+                                        "id": "system_RightManage",
+                                        "text": "角色权限管理"
+                                    },
+                                    "name": "MyMenuItem14",
+                                    "designerId": "e753412b-dcef-41fc-9157-645a1b7a4e5e"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hideOnClick": false,
+                                        "id": "system_DepartmentManage",
+                                        "text": "部门信息管理"
+                                    },
+                                    "name": "MyMenuItem8",
+                                    "designerId": "ebc74e2e-7216-4d2a-b69f-707e9c339873"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "hideOnClick": false,
+                                        "id": "system_Log",
+                                        "text": "系统日志"
+                                    },
+                                    "name": "MyMenuItem21",
+                                    "designerId": "28e8eac3-bb75-475a-afe9-5866ddfc7026"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "hideOnClick": false,
+                                        "id": "system_DataSearch",
+                                        "text": "数据查询"
+                                    },
+                                    "name": "MyMenuItem16",
+                                    "designerId": "2283ac01-3c3a-44f5-94cc-96dd77be6e58"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "hideOnClick": false,
+                                        "id": "system_DataEdit",
+                                        "text": "数据编辑"
+                                    },
+                                    "name": "MyMenuItem17",
+                                    "designerId": "f1690a19-469f-4b07-907f-21a6024b6fd6"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "hideOnClick": false,
+                                        "id": "system_DataManage",
+                                        "text": "数据管理"
+                                    },
+                                    "name": "MyMenuItem18",
+                                    "designerId": "49d347e2-b3be-4a27-8557-33de360ccf92"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMenu3Click8",
+                                        "implHandler": [
+                                            "var xtype = item.id;",
+                                            "var mainView = Ext.getCmp('mainView');",
+                                            "mainView.removeAll();",
+                                            "mainView.add(Ext.widget(xtype));"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onMenu3Click8",
+                                    "designerId": "7f8a6ba1-7ab2-4cf4-af3f-dcac50872d96"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMenuPanelBeforeRender",
+                        "implHandler": [
+                            "",
+                            "console.log(\"权限管理开始..\");",
+                            "Ext.Ajax.request({",
+                            "    url: 'get_currentUserRight',",
+                            "    success: function(response) {",
+                            "        var result = JSON.parse(response.responseText);",
+                            "        if (result.success) {",
+                            "            var rightMap = result.root;",
+                            "            var children = component.query('panel');",
+                            "            for (var index in children) {",
+                            "                var child = children[index];",
+                            "                if (child && child.xtype == 'panel') {",
+                            "                    var title = child.title;",
+                            "                    var isShow = rightMap[title];",
+                            "                    if (!isShow || isShow=='undefined') {",
+                            "                        child.setHidden(true);",
+                            "                    }",
+                            "                }",
+                            "            }",
+                            "        } else {",
+                            "            console.log(\"errorrr.\");",
+                            "        }",
+                            "    },",
+                            "    failure: function(conn, response, options, eOpts) {",
+                            "        console.log(\"请求错误。\");",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onMenuPanelBeforeRender",
+                    "designerId": "da005f7a-b65d-4d7a-a559-5f5215382f35"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "mainView",
+                "layout": "fit",
+                "layout|region": "center",
+                "title": null
+            },
+            "name": "MyPanel",
+            "designerId": "54cf8d41-376c-41cb-803e-3fdd2a3ef53c"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainViewAfterRender",
+                "implHandler": [
+                    "var xtype = 'homePanel';",
+                    "var mainView = Ext.getCmp('mainView');",
+                    "mainView.removeAll();",
+                    "mainView.add(Ext.widget(xtype));"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onMainViewAfterRender",
+            "designerId": "b66c4293-cf76-4fb6-bed6-d4a0e5aee094"
+        }
+    ]
+}

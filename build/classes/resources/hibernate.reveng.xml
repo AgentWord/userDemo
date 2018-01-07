@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="achievement_file" match-catalog="db"></table-filter>
+	<table-filter match-name="notice_columns" match-catalog="db"></table-filter>
+	<table-filter match-name="notice_news" match-catalog="db"></table-filter>
+	<table-filter match-name="u_dept_info" match-catalog="db"></table-filter>
+	<table-filter match-name="u_right_info" match-catalog="db"></table-filter>
+	<table-filter match-name="u_role_info" match-catalog="db"></table-filter>
+	<table-filter match-name="u_role_right" match-catalog="db"></table-filter>
+	<table-filter match-name="u_user_info" match-catalog="db"></table-filter>
+	<table-filter match-name="u_user_role" match-catalog="db"></table-filter>
+</hibernate-reverse-engineering>
